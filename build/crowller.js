@@ -39,10 +39,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: tjwang
+ * @Date: 2021-07-05 08:50:22
+ * @LastEditors: tjwang
+ * @LastEditTime: 2021-07-23 08:36:51
+ */
 var superagent_1 = __importDefault(require("superagent"));
 var fs_1 = __importDefault(require("fs"));
 var path_1 = __importDefault(require("path"));
-var dellAnalyzer_1 = __importDefault(require("./dellAnalyzer"));
 var Crowller = /** @class */ (function () {
     function Crowller(url, analyzer) {
         this.url = url;
@@ -83,8 +90,4 @@ var Crowller = /** @class */ (function () {
     };
     return Crowller;
 }());
-var secret = 'secretKey';
-var url = 'http://www.dell-lee.com/';
-var analyzer = dellAnalyzer_1.default.getInstance();
-new Crowller(url, analyzer);
-console.log('11111222');
+exports.default = Crowller;

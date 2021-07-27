@@ -1,7 +1,14 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: tjwang
+ * @Date: 2021-07-05 08:50:22
+ * @LastEditors: tjwang
+ * @LastEditTime: 2021-07-23 08:36:51
+ */
 import superagent from 'superagent';
 import fs from 'fs';
 import path from 'path';
-import DellAnalyzer from './dellAnalyzer';
 export interface Analyzer {
   analyze:(html:string, filePath:string) => string;
 }
@@ -24,8 +31,4 @@ class Crowller {
     fs.writeFileSync(this.filePath, content);
   }
 }
-const secret = 'secretKey'; 
-const url = 'http://www.dell-lee.com/';
-
-const analyzer = DellAnalyzer.getInstance();
-new Crowller(url, analyzer);
+export default Crowller;
