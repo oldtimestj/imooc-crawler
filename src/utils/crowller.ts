@@ -4,7 +4,7 @@
  * @Author: tjwang
  * @Date: 2021-07-05 08:50:22
  * @LastEditors: tjwang
- * @LastEditTime: 2021-07-23 08:36:51
+ * @LastEditTime: 2021-07-28 08:51:04
  */
 import superagent from 'superagent';
 import fs from 'fs';
@@ -13,7 +13,7 @@ export interface Analyzer {
   analyze:(html:string, filePath:string) => string;
 }
 class Crowller {
-  private filePath = path.resolve(__dirname, '../data/course.json');
+  private filePath = path.resolve(__dirname, '../../data/course.json');
   constructor(private url:string,private analyzer:Analyzer) {
     this.initSpiderProcess()
   }
